@@ -11,9 +11,19 @@ set(CMAKE_AUTOUIC ON)
 
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
+
 add_executable(OS_VME_13
     src/main.cpp
+
+    src/core/page_replacement.h
+    src/core/page_replacement.cpp
+
+    src/core/fifo.cpp
+    src/core/lru.cpp
+    src/core/opt.cpp
+    src/core/second_chance.cpp
 )
+
 
 target_link_libraries(OS_VME_13
     PRIVATE Qt6::Widgets
