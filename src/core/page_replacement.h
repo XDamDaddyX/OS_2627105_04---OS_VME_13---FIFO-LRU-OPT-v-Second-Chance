@@ -22,3 +22,14 @@ struct Result {
 
 // Chạy mô phỏng một thuật toán trên reference string với frameCount frame.
 Result simulate(Algorithm algo, const std::vector<int>& refs, int frameCount);
+
+ // Cac ham thuat toan do tung thanh vien phu trach
+
+Result runFIFO(const std::vector<int>& refs, int frameCount);
+
+Result runLRU(const std::vector<int>& refs, int frameCount);
+
+Result runOPT(const std::vector<int>& refs, int frameCount);
+
+Result runSecondChance(const std::vector<int>& refs, int frameCount);
+
