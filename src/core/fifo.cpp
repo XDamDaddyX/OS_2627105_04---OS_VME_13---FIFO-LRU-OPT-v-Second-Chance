@@ -3,6 +3,14 @@
 #include <stdexcept>
 #include <queue>
 #include <algorithm>
+/**
+ * @brief Simulates FIFO page replacement.
+ *
+ * @param refs Sequence of referenced pages.
+ * @param frameCount Number of available memory frames.
+ * @return Simulation result with hits, faults and steps.
+ * @throws std::invalid_argument If frameCount is not positive.
+ */
 
 Result runFIFO(const std::vector<int>& refs, int frameCount)
 {
