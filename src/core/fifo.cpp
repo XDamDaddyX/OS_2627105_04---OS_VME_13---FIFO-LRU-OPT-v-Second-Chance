@@ -18,6 +18,15 @@ Result runFIFO(const std::vector<int>& refs, int frameCount)
         throw std::invalid_argument("Frame count must be positive");
     }
 
+for (int page : refs) {
+    if (page < 0) {
+        throw std::invalid_argument(
+            "Page numbers must be non-negative"
+        );
+    }
+}
+
+
     Result result{};
     result.algo = Algorithm::FIFO;
     result.faults = 0;
