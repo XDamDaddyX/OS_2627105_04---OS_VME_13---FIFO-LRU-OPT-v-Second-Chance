@@ -1,0 +1,6 @@
+test_id,algorithm,expected_faults
+T01,FIFO,15
+T01,LRU,12
+T01,OPT,9
+T02,FIFO,9
+T03,FIFO,10

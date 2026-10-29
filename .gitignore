@@ -1,0 +1,10 @@
+build/
+out/
+.vs/
+*.exe
+*.obj
+*.o
+*.pdb
+*.ilk
+*.user
+CMakeLists.txt.user
