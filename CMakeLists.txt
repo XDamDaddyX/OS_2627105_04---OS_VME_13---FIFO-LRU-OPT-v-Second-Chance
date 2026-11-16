@@ -27,8 +27,11 @@ add_executable(OS_VME_13
     src/core/opt.cpp
     src/core/second_chance.cpp
 
-    src/io/input_csv.h
+        src/io/input_csv.h
     src/io/input_csv.cpp
+
+    src/io/output_csv.h
+    src/io/output_csv.cpp
 )
 
 target_link_libraries(OS_VME_13
