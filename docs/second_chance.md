@@ -38,7 +38,33 @@ Thuật toán Second-Chance là phiên bản cải tiến của FIFO bằng các
 
 ---
 
-## 3. Mã giả (Pseudocode)
+## 3. Lưu đồ hoạt động (Flowchart)
+
+```mermaid
+flowchart TD
+    Start(["Bắt đầu truy cập trang 'page'"]) --> CheckHit{"Trang đã có trong RAM (frames)?"}
+    
+    CheckHit -- "CÓ (Page Hit)" --> SetBit["Đặt refBits[hitIndex] = 1<br/>(Cấp thêm cơ hội thứ hai)"]
+    SetBit --> NextPage(["Chuyển sang trang tiếp theo"])
+    
+    CheckHit -- "KHÔNG (Page Fault)" --> IncFault["Tăng số Faults"]
+    IncFault --> CheckEmpty{"Còn frame trống (-1)?"}
+    
+    CheckEmpty -- "CÒN" --> PutEmpty["Nạp vào frame trống<br/>Đặt refBits = 1<br/>pointer = (pointer + 1) % frameCount"]
+    PutEmpty --> NextPage
+    
+    CheckEmpty -- "HẾT (Đã đầy RAM)" --> CheckBit{"refBits[pointer] == 0?"}
+    
+    CheckBit -- "Không (bit == 1)" --> ClearBit["Xóa bit: refBits[pointer] = 0<br/>(Hủy cơ hội thứ 2)<br/>pointer = (pointer + 1) % frameCount"]
+    ClearBit --> CheckBit
+    
+    CheckBit -- "Đúng (bit == 0)" --> Replace["CHỌN LÀM VICTIM!<br/>Thay trang cũ bằng trang mới<br/>Đặt refBits[pointer] = 1<br/>pointer = (pointer + 1) % frameCount"]
+    Replace --> NextPage
+```
+
+---
+
+## 4. Mã giả (Pseudocode)
 
 ```text
 Function runSecondChance(refs: List of Int, frameCount: Int) -> Result:
@@ -84,7 +110,7 @@ Function runSecondChance(refs: List of Int, frameCount: Int) -> Result:
 
 ---
 
-## 4. Kiểm thử và Đối chiếu (Testing & Verification)
+## 5. Kiểm thử và Đối chiếu (Testing & Verification)
 
 ### 4.1 Chuỗi tham chiếu mẫu (Standard Benchmark từ Sách Silberschatz)
 - **Reference String:** `7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2, 1, 2, 0, 1, 7, 0, 1`
@@ -103,7 +129,7 @@ Function runSecondChance(refs: List of Int, frameCount: Int) -> Result:
 
 ---
 
-## 5. Đóng góp vào Báo cáo Đồ án
+## 6. Đóng góp vào Báo cáo Đồ án
 
 | Mục báo cáo | Nội dung đóng góp |
 |---|---|
