@@ -518,6 +518,8 @@ Nhóm có thể sử dụng công cụ AI để:
 - Tham khảo cấu trúc chương trình và giải pháp thiết kế.
 - Gợi ý kiểm thử và phát hiện lỗi.
 - Hỗ trợ rà soát code và tài liệu.
+- Hỗ trợ viết tài liệu báo cáo bằng tài liệu đã soạn sẵn. ( checkpoint1,checkpoint2 )
+- Công cụ AI đã dùng: ClaudeAI, Google Gemini
 
 Tuy nhiên, mỗi thành viên phải hiểu, tự kiểm chứng và chịu trách nhiệm về code mình đóng góp.
 
