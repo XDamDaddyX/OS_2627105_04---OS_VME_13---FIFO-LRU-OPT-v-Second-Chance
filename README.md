@@ -23,7 +23,7 @@ Dự án mô phỏng bốn thuật toán thay trang trong quản lý bộ nhớ:
 - Xuất kết quả và trace ra CSV.
 - Có test case, kiểm thử hiệu năng và báo cáo.
 
-**Trạng thái hiện tại:** Đã hoàn thành bộ khung Qt + CMake và các file thuật toán. Logic FIFO, LRU, OPT, Second-Chance, GUI mô phỏng hoàn chỉnh và đọc/ghi CSV vẫn cần được phát triển.
+**Trạng thái hiện tại:** Đã hoàn thành bộ khung Qt + CMake và các file thuật toán. Logic FIFO, LRU, OPT, Second-Chance, GUI mô phỏng hoàn chỉnh và đọc/ghi CSV đã hoàn thành
 
 ## 2. Phân công nhiệm vụ
 
