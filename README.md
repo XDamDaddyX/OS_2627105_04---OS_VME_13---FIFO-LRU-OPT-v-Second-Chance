@@ -479,15 +479,15 @@ Hiện nhóm chưa thiết lập CI/CD hoàn chỉnh. Có thể bổ sung CTest 
 - [x] Khởi tạo Qt Widgets + CMake.
 - [x] Tạo bộ khung các thuật toán.
 - [x] Tạo branch `develop`.
-- [ ] Hoàn thành FIFO.
-- [ ] Hoàn thành LRU.
-- [ ] Hoàn thành OPT.
-- [ ] Hoàn thành Second-Chance.
-- [ ] Hoàn thành GUI mô phỏng.
-- [ ] Hoàn thành đọc/ghi CSV.
-- [ ] Kiểm thử tích hợp và hiệu năng.
-- [ ] Hoàn thành báo cáo.
-- [ ] Chuẩn bị demo.
+- [x] Hoàn thành FIFO.
+- [x] Hoàn thành LRU.
+- [x] Hoàn thành OPT.
+- [x] Hoàn thành Second-Chance.
+- [x] Hoàn thành GUI mô phỏng.
+- [x] Hoàn thành đọc/ghi CSV.
+- [x] Kiểm thử tích hợp và hiệu năng.
+- [x] Hoàn thành báo cáo.
+- [x] Chuẩn bị demo.
 
 ## 12. Báo cáo và tài liệu
 
@@ -518,6 +518,8 @@ Nhóm có thể sử dụng công cụ AI để:
 - Tham khảo cấu trúc chương trình và giải pháp thiết kế.
 - Gợi ý kiểm thử và phát hiện lỗi.
 - Hỗ trợ rà soát code và tài liệu.
+- Hỗ trợ viết tài liệu báo cáo bằng tài liệu đã soạn sẵn. ( checkpoint1,checkpoint2 )
+- Công cụ AI đã dùng: ClaudeAI, Google Gemini
 
 Tuy nhiên, mỗi thành viên phải hiểu, tự kiểm chứng và chịu trách nhiệm về code mình đóng góp.
 
